@@ -13,7 +13,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.html" class="js-logo-clone">CESFAM</a>
+              <a href="index.php" class="js-logo-clone">CESFAM</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -41,7 +41,7 @@
                 </li>
                 <li><a href="about.php">Nosotros</a></li>
                 <li><a href="contact.php">Contacto</a></li>
-                <li><a href="./login.php">Entrar</a></li>
+                <li><a href="login.php">Entrar</a></li>
               </ul>
             </nav>
           </div>

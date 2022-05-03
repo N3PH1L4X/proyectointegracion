@@ -37,7 +37,7 @@
           </div>
           <div class="col-md-12">
     
-          <form action="./correo.php" method="POST">
+          <form action="./funciones/correo.php" method="POST">
     
                 <div class="p-3 p-lg-5 border">
                 
