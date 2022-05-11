@@ -1,3 +1,12 @@
+<?php
+	// Initialize session
+	session_start();
+
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+		header('location: ../login.php');
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +40,7 @@
             </div>
         </nav>
         <div class="container p-4">
-            <?php include ("../config/config.php");
+            <?php include ("../config/config.php"); // INCLUIR ARCHIVO DE BASE DE DATOS
                         if(isset($_SESSION['message'])){?>
             <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
                 <?=  $_SESSION['message']?>
@@ -46,13 +55,13 @@
                         <form method="post" name="form" onsubmit="return validarform()" action="create.php">
                             <div class="form-group">
                                 <input type="text" name="nombre" class="form-control" placeholder="Ingresa nombre"
-                                    autocomplete="off" autofocus>
+                                    autocomplete="off" autofocus required>
                             </div>
 
 
                             <div class="form-group">
                                 <input type="text" name="fabrica" class="form-control" placeholder="Ingresa fabrica"
-                                    autocomplete="off" autofocus>
+                                    autocomplete="off" autofocus required>
                             </div>
 
 
@@ -60,25 +69,27 @@
 
                             <div class="form-group">
                                 <input type="text" name="descripcion" class="form-control" placeholder="Ingresa descripcion"
-                                    autocomplete="off" required>
+                                    autocomplete="off" required required>
                             </div>
                             <div class="form-group">
                                 <input type="text" name="cantidad" class="form-control" placeholder="Ingresa cantidad"
-                                    autocomplete="off" required>
+                                    autocomplete="off" required required>
                             </div>
 
 
 
                             <div class="form-group">
                                 <input type="text" name="gramaje" class="form-control" placeholder="Ingresa gramaje"
-                                    autocomplete="off" autofocus>
+                                    autocomplete="off" autofocus required>
                             </div>
                             <input type="submit" class="btn btn-success btn-block" name="send" value="Agregar">
                             <input type="reset" class="btn btn-secondary btn-block" value="Limpiar">
+                            <a href="../logout.php" class="btn btn-block btn-danger">Cerrar sesion</a>
+                            <a href="../index.php" class="btn btn-warning btn-block">Inicio</a>
+                            <a href="generarpdf.php" class="btn btn-block btn-info" target=”_blank”>Generar reporte</a>
                            
                         </form>
-                        <br>
-                              <a href="../index.php"> <button style =" width:290px;"  class="btn btn-warning btn-block">Inicio</button></a> 
+                        <br> 
                     </div>
                 </div> <!--End col-md-4-->
                 <div class="col-md-8 mx-auto">
@@ -101,17 +112,17 @@
                                         #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
                             ?>
                             <tr>
-                                <td><?php echo $row['idProducto'] ?></td>
-                                <td><?php echo $row['nombProducto'] ?></td>
-                                <td><?php echo $row['fabricProducto'] ?></td>
-                                <td><?php echo $row['descripProducto'] ?></td>
-                                <td><?php echo $row['cantidProducto'] ?></td>
+                                <td><?php echo $row['id'] ?></td>
+                                <td><?php echo $row['nombreProducto'] ?></td>
+                                <td><?php echo $row['fabricaProducto'] ?></td>
+                                <td><?php echo $row['descripcionProducto'] ?></td>
+                                <td><?php echo $row['cantidadProducto'] ?></td>
                                 <td><?php echo $row['gramajeProducto'] ?></td>
                                 <td>
-                                    <a href="update.php?id=<?php echo $row['idProducto']?>" class="btn btn-secondary">
+                                    <a href="update.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="delete.php?id=<?php echo $row['idProducto']?>" class="btn btn-danger">
+                                    <a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>

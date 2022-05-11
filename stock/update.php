@@ -1,3 +1,12 @@
+<?php
+	// Initialize session
+	session_start();
+
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+		header('location: ../login.php');
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,22 +39,22 @@
         <?php
             include ("../config/config.php");
 
-            $conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam', 3306);
+            $conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam'); // CAMBIAR CREDENCIALES ENTRE LOCAL Y REMOTO
 
             if(isset($_GET['id'])){ #Determina si una variable está definida y no es NULL / isset
                 $id = $_GET['id'];
 
-                $query = "SELECT * FROM productos WHERE idProducto = $id";
+                $query = "SELECT * FROM productos WHERE id = $id";
                 $result = mysqli_query($conn, $query);
                 #Obtiene el número de filas de un conjunto de resultados / mysqli_num_rows
                 if(mysqli_num_rows($result) == 1){
                     $row = mysqli_fetch_array($result);
                     #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
-                    $id = $row['idProducto'];
-                    $nombre = $row['nombProducto'];
-                    $fabrica = $row['fabricProducto'];
-                    $descripcion = $row['descripProducto'];
-                    $cantidad = $row['cantidProducto'];
+                    $id = $row['id'];
+                    $nombre = $row['nombreProducto'];
+                    $fabrica = $row['fabricaProducto'];
+                    $descripcion = $row['descripcionProducto'];
+                    $cantidad = $row['cantidadProducto'];
                     $gramaje = $row['gramajeProducto'];
                 }
             }
@@ -57,7 +66,7 @@
                 $cantidad = $_POST['cantidad'];
                 $gramaje = $_POST['gramaje'];
 
-                $update = "UPDATE productos set nombProducto = '$nombre', fabricProducto ='$fabrica', descripProducto = '$descripcion', cantidProducto = '$cantidad',  gramajeProducto = '$gramaje'    WHERE idProducto = $id";
+                $update = "UPDATE productos set nombreProducto = '$nombre', fabricaProducto ='$fabrica', descripcionProducto = '$descripcion', cantidadProducto = '$cantidad',  gramajeProducto = '$gramaje'    WHERE id = $id";
                 mysqli_query($conn, $update);
                 $_SESSION['message'] = 'Registro actualizado exitosamente';
                 $_SESSION['message_type'] = 'info'; # Función de bootstrap

@@ -1,12 +1,20 @@
 <?php
     include ("../config/config.php");
 
-    $conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam', 3306);
+    // Initialize session
+	session_start();
+
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+		header('location: ../login.php');
+		exit;
+	}
+
+    $conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam');
 
     if (isset($_GET['id'])){    
         $id = $_GET['id'];
         
-        $delete = "DELETE FROM productos WHERE idProducto = $id";
+        $delete = "DELETE FROM productos WHERE id = $id";
 
         if (mysqli_query($conn, $delete)){
             $_SESSION['message'] = 'Registro borrado exitosamente';

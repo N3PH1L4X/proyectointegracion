@@ -1,5 +1,14 @@
 <?php
     include ("/cesfam/config/config.php");
+
+    // Initialize session
+	session_start();
+
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+		header('location: ../login.php');
+		exit;
+	}
+
     if (isset($_POST['send'])){
         // $id = $_POST['id'];
         $nombre = $_POST['nombre'];
@@ -8,9 +17,9 @@
         $cantidad = $_POST['cantidad'];
         $gramaje = $_POST['gramaje'];
 
-        $conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam', 3306);
+        $conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam');
 
-        $insert = "INSERT INTO productos (nombProducto,fabricProducto,descripProducto,cantidProducto,gramajeProducto)
+        $insert = "INSERT INTO productos (nombreProducto,fabricaProducto,descripcionProducto,cantidadProducto,gramajeProducto)
         VALUES ('$nombre','$fabrica','$descripcion','$cantidad','$gramaje')";
     
         if (mysqli_query($conn,$insert)){
