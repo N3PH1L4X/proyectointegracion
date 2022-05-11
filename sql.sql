@@ -8,11 +8,11 @@ CREATE TABLE users (
 );
 
 CREATE TABLE productos (
-    idProducto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nombProducto VARCHAR(50) NOT NULL,
-    fabricProducto VARCHAR(50) NOT NULL,
-    descripProducto VARCHAR(255) NOT NULL,
-    cantidProducto INT NOT NULL,
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombreProducto VARCHAR(50) NOT NULL,
+    fabricaProducto VARCHAR(50) NOT NULL,
+    descripcionProducto VARCHAR(250) NOT NULL,
+    cantidadProducto INT NOT NULL,
     gramajeProducto VARCHAR(50) NOT NULL
 );
 
