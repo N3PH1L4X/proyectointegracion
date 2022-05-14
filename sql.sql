@@ -29,3 +29,6 @@ INSERT INTO `productos` (`idProducto`, `nombProducto`, `fabricProducto`, `descri
 INSERT INTO `markers` (`id`, `lat`, `lng`) VALUES ('1', '-33.67984928437336', '-71.22028250553147');
 INSERT INTO `markers` (`id`, `lat`, `lng`) VALUES ('2', '-33.68838511508215', '-71.21443897176266');
 INSERT INTO `markers` (`id`, `lat`, `lng`) VALUES ('3', '-33.68685842765098', '-71.21933835377865');
+INSERT INTO `markers` (`id`, `lat`, `lng`) VALUES ('4', '', '');
+INSERT INTO `markers` (`id`, `lat`, `lng`) VALUES ('5', '', '');
+INSERT INTO `markers` (`id`, `lat`, `lng`) VALUES ('6', '', '');

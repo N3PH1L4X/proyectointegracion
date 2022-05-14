@@ -14,32 +14,23 @@
 		die("Error: Unable to connect " . $mysql_db->connect_error);
 	}
 
-  $consulta1 = "SELECT * FROM markers WHERE id = 1";
+  $consulta1 = "SELECT * FROM markers WHERE id = 4";
   $resultado = mysqli_query($conn, $consulta1);
   $row = mysqli_fetch_assoc($resultado);
   $latitud1 = $row['lat'];
   $longitud1 = $row['lng'];
-
-  echo $latitud1;
-  echo $longitud1;
   
-  $consulta2 = "SELECT * FROM markers WHERE id = 2";
+  $consulta2 = "SELECT * FROM markers WHERE id = 5";
   $resultado = mysqli_query($conn, $consulta2);
   $row = mysqli_fetch_assoc($resultado);
   $latitud2 = $row['lat'];
   $longitud2 = $row['lng'];
 
-  echo $latitud2;
-  echo $longitud2;
-
-  $consulta3 = "SELECT * FROM markers WHERE id = 3";
+  $consulta3 = "SELECT * FROM markers WHERE id = 6";
   $resultado = mysqli_query($conn, $consulta3);
   $row = mysqli_fetch_assoc($resultado);
   $latitud3 = $row['lat'];
   $longitud3 = $row['lng'];
-
-  echo $latitud3;
-  echo $longitud3;
   
 ?>
 
@@ -191,8 +182,8 @@
             &zoom=15
             &size=640x500
             &maptype=roadmap
-            &markers=color:red%7Clabel:3%7C<?php echo $latitud1; ?>,<?php echo $longitud1; ?>
-            &markers=color:red%7Clabel:3%7C<?php echo $latitud2; ?>,<?php echo $longitud2; ?>
+            &markers=color:red%7Clabel:1%7C<?php echo $latitud1; ?>,<?php echo $longitud1; ?>
+            &markers=color:red%7Clabel:2%7C<?php echo $latitud2; ?>,<?php echo $longitud2; ?>
             &markers=color:red%7Clabel:3%7C<?php echo $latitud3; ?>,<?php echo $longitud3; ?>
             &key=AIzaSyBXJEa7IuU4FoPgYW1nYxZlprvPm9RFul8" alt="Mapa">
 
