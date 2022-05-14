@@ -1,3 +1,48 @@
+<?php
+
+  // Database credentials
+	define('DB_SERVER', 'localhost:3306');
+	define('DB_USERNAME', 'root');
+	define('DB_PASSWORD', '19asd19asd');
+	define('DB_NAME', 'bddcesfam');
+
+	// Attempt to connect to MySQL database
+	$mysql_db = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+	$conn = mysqli_connect('localhost', 'root', '19asd19asd', 'bddcesfam', 3306);
+
+	if (!$mysql_db) {
+		die("Error: Unable to connect " . $mysql_db->connect_error);
+	}
+
+  $consulta1 = "SELECT * FROM markers WHERE id = 1";
+  $resultado = mysqli_query($conn, $consulta1);
+  $row = mysqli_fetch_assoc($resultado);
+  $latitud1 = $row['lat'];
+  $longitud1 = $row['lng'];
+
+  echo $latitud1;
+  echo $longitud1;
+  
+  $consulta2 = "SELECT * FROM markers WHERE id = 2";
+  $resultado = mysqli_query($conn, $consulta2);
+  $row = mysqli_fetch_assoc($resultado);
+  $latitud2 = $row['lat'];
+  $longitud2 = $row['lng'];
+
+  echo $latitud2;
+  echo $longitud2;
+
+  $consulta3 = "SELECT * FROM markers WHERE id = 3";
+  $resultado = mysqli_query($conn, $consulta3);
+  $row = mysqli_fetch_assoc($resultado);
+  $latitud3 = $row['lat'];
+  $longitud3 = $row['lng'];
+
+  echo $latitud3;
+  echo $longitud3;
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -138,71 +183,27 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 site-section-heading text-center pt-4">
-            <h2>The Team</h2>
+            
+            <!-- Aqui mapa -->
+
+            <p>Nuestros locales</p>
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=Melipilla,Chile
+            &zoom=15
+            &size=640x500
+            &maptype=roadmap
+            &markers=color:red%7Clabel:3%7C<?php echo $latitud1; ?>,<?php echo $longitud1; ?>
+            &markers=color:red%7Clabel:3%7C<?php echo $latitud2; ?>,<?php echo $longitud2; ?>
+            &markers=color:red%7Clabel:3%7C<?php echo $latitud3; ?>,<?php echo $longitud3; ?>
+            &key=AIzaSyBXJEa7IuU4FoPgYW1nYxZlprvPm9RFul8" alt="Mapa">
+
+            <!-- Hasta aqui mapa -->
+
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-6 mb-5">
-    
-            <div class="block-38 text-center">
-              <div class="block-38-img">
-                <div class="block-38-header">
-                  <img src="images/person_1.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Elizabeth Graham</h3>
-                  <p class="block-38-subheading">CEO/Co-Founder</p>
-                </div>
-                <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 mb-5">
-            <div class="block-38 text-center">
-              <div class="block-38-img">
-                <div class="block-38-header">
-                  <img src="images/person_2.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Jennifer Greive</h3>
-                  <p class="block-38-subheading">Co-Founder</p>
-                </div>
-                <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 mb-5">
-            <div class="block-38 text-center">
-              <div class="block-38-img">
-                <div class="block-38-header">
-                  <img src="images/person_3.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Patrick Marx</h3>
-                  <p class="block-38-subheading">Marketing</p>
-                </div>
-                <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 mb-5">
-            <div class="block-38 text-center">
-              <div class="block-38-img">
-                <div class="block-38-header">
-                  <img src="images/person_4.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Mike Coolbert</h3>
-                  <p class="block-38-subheading">Sales Manager</p>
-                </div>
-                <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div>
+          
+
+
         </div>
       </div>
     </div>
