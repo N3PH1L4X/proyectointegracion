@@ -4,10 +4,10 @@
     // Initialize session
 	session_start();
 
-	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
-		header('location: ../login.php');
-		exit;
-	}
+	// if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+	// 	header('location: ../login.php');
+	// 	exit;
+	// }
 
     if (isset($_POST['send'])){
         // $id = $_POST['id'];

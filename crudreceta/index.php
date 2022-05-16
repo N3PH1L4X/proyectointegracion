@@ -58,14 +58,13 @@ $row = mysqli_fetch_assoc($resultado);
         </nav>
         <div class="container p-4">
             <?php include("conexion.php");
-                        if(isset($_SESSION['message'])){?>
+                        if(isset($_SESSION['message']))?>
             <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
                 <?=  $_SESSION['message']?>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <?php session_unset(); } #Libera todas las variables de sesión ?>
             <div class="row">
                 <div class="col-md-9 mx-auto">
                     <div class="card card-body">
@@ -122,6 +121,7 @@ $row = mysqli_fetch_assoc($resultado);
                            
                             <input type="submit" class="btn btn-success btn-block" name="send" value="Enviar">
                             <input type="reset" class="btn btn-secondary btn-block" value="Limpiar Datos">
+                            <a href="../panel-usuario.php" class="btn btn-info btn-block">Volver</a>
                            
                         </form>
                         
