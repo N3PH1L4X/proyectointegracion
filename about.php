@@ -1,7 +1,7 @@
 <?php
 
   // Database credentials
-	define('DB_SERVER', 'localhost:3306');
+	define('DB_SERVER', 'localhost');
 	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', '19asd19asd');
 	define('DB_NAME', 'bddcesfam');
@@ -14,19 +14,19 @@
 		die("Error: Unable to connect " . $mysql_db->connect_error);
 	}
 
-  $consulta1 = "SELECT * FROM markers WHERE id = 4";
+  $consulta1 = "SELECT * FROM markers WHERE id = 1";
   $resultado = mysqli_query($conn, $consulta1);
   $row = mysqli_fetch_assoc($resultado);
   $latitud1 = $row['lat'];
   $longitud1 = $row['lng'];
   
-  $consulta2 = "SELECT * FROM markers WHERE id = 5";
+  $consulta2 = "SELECT * FROM markers WHERE id = 2";
   $resultado = mysqli_query($conn, $consulta2);
   $row = mysqli_fetch_assoc($resultado);
   $latitud2 = $row['lat'];
   $longitud2 = $row['lng'];
 
-  $consulta3 = "SELECT * FROM markers WHERE id = 6";
+  $consulta3 = "SELECT * FROM markers WHERE id = 3";
   $resultado = mysqli_query($conn, $consulta3);
   $row = mysqli_fetch_assoc($resultado);
   $latitud3 = $row['lat'];
