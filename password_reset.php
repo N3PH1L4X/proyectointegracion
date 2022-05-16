@@ -106,6 +106,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <input type="submit" class="btn btn-block btn-primary" value="Submit">
                     <a class="btn btn-block btn-link bg-light" href="welcome.php">Cancel</a>
                 </div>
+                <div style="width:100%; margin-left:40%">
+                    <a href="panel-usuario.php" class="btn btn-info btn-block" style="width:20%">Volver</a>
+                </div>
             </form>
         </section>
     </main>    

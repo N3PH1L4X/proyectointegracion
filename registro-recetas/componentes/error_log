@@ -1,0 +1,40 @@
+[14-May-2022 21:32:07 America/Santiago] PHP Notice:  session_start(): A session had already been started - ignoring in /home5/cga81478/public_html/pruebasmarco/consulta_receta/php/conexion.php on line 3
+[14-May-2022 21:32:07 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php:5
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php on line 5
+[14-May-2022 21:32:07 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php:3
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php on line 3
+[14-May-2022 21:32:18 America/Santiago] PHP Notice:  session_start(): A session had already been started - ignoring in /home5/cga81478/public_html/pruebasmarco/consulta_receta/php/conexion.php on line 3
+[14-May-2022 21:32:18 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php:5
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php on line 5
+[14-May-2022 21:32:18 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php:3
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php on line 3
+[14-May-2022 21:33:43 America/Santiago] PHP Notice:  session_start(): A session had already been started - ignoring in /home5/cga81478/public_html/pruebasmarco/consulta_receta/php/conexion.php on line 3
+[14-May-2022 21:33:43 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php:5
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php on line 5
+[14-May-2022 21:33:43 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php:3
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php on line 3
+[14-May-2022 21:33:54 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php:3
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php on line 3
+[14-May-2022 21:35:38 America/Santiago] PHP Notice:  session_start(): A session had already been started - ignoring in /home5/cga81478/public_html/pruebasmarco/consulta_receta/php/conexion.php on line 3
+[14-May-2022 21:35:38 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php:5
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/tabla.php on line 5
+[14-May-2022 21:35:38 America/Santiago] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php:3
+Stack trace:
+#0 {main}
+  thrown in /home5/cga81478/public_html/pruebasmarco/consulta_receta/componentes/buscador.php on line 3

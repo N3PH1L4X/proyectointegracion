@@ -1,0 +1,27 @@
+<input type="text" id="buscar">
+<div id="resultados"></div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js">
+</script>
+
+<script>
+
+	
+	$(function(){
+		$("#buscar").on("keyup", function(){
+			var buscar = $("#buscar").val();
+
+			$.ajax({
+				type: "post",
+				url: "buscar.php",
+				data: {
+					busqueda: buscar
+				},
+				success: function(respuesta){
+					$("#resultados").html(respuesta);
+				}
+			})
+
+		})
+	})
+</script>

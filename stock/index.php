@@ -85,8 +85,8 @@
                             <input type="submit" class="btn btn-success btn-block" name="send" value="Agregar">
                             <input type="reset" class="btn btn-secondary btn-block" value="Limpiar">
                             <a href="../logout.php" class="btn btn-block btn-danger">Cerrar sesion</a>
-                            <a href="../index.php" class="btn btn-warning btn-block">Inicio</a>
-                            <a href="generarpdf.php" class="btn btn-block btn-info" target=”_blank”>Generar reporte</a>
+                            <a href="../panel-usuario.php" class="btn btn-info btn-block">Volver</a>
+                            <a href="generarpdf.php" class="btn btn-block btn-warning" target=”_blank”>Generar reporte</a>
                            
                         </form>
                         <br> 
